@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
 
-background-image: url("images/background2.jpg");
+background-image: url("background2.jpg");
     background-size: cover; /* Ensure the image covers the entire viewport */
     background-repeat: no-repeat;
     background-attachment: fixed; /* Keep the background fixed while scrolling */
@@ -22,27 +22,97 @@ background-image: url("images/background2.jpg");
     display: flex;
   }
 
+  #logo {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+
+  }
+
 H1 {
     font-family: Oswald, sans-serif;
-    color: #27AE60;
-    font-size: 46px;
+    color: #25a102;
+    font-size: 36px;
     text-align: center;
     
   }
+
+  H3 {
+    font-family: Oswald, sans-serif;
+    color: #4c4f4b;
+    font-size: 24px;
+    text-align: center;
+    
+  }
+
+  #text-heading{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 p#footer {
     font-family: Oswald, sans-serif;
-    color: #27AE60;
+    color: #24a502;
     text-align: center;
     
   }
 
   .container {
-    max-width: 800px;
+    
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(227, 227, 227);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
+.button-container-div{
+  display:flex;
+
+}
+
+.form-container{
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-div{
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-left:10px;
+}
+
+.input-container-div{
+  display:flex;
+  max-width: 600px;
+}
+
+.input-label-div{
+  width: 50%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
+  font-weight: bolder;
+  text-align: left;
+  color:#060606;
+  align-content: center;
+  padding-left: 10px;
+}
+
+.input-value-div{
+  width: 50%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.itemsName{
+  font-size: 20px; 
+  font-weight: bold; 
+  color: #24a502;
+}
+
   label {
     font-weight: bold;
   }
@@ -57,45 +127,54 @@ p#footer {
     width: calc(100% - 20px);
   }
   input[type="submit"] {
-    background-color: #229954;
+    background-color: #24a502;
     color: yellow;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
   }
   input[type="submit"]:hover {
     background-color: #555;
+    color: white;
   }
 
   input[type="reset"] {
-    background-color: #229954;
+    background-color: #24a502;
     color: yellow;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
   }
   input[type="reset"]:hover {
     background-color: #555;
+    color: white;
   }
 
   .output {
+    background-color: #f0f0f0;
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .output label {
-    font-weight: normal;
+    font-weight: bolder;
+    color:#060606;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
 #Total{
 font-family: Oswald, sans-serif; 
-font-weight: bold; 
+font-weight: bolder;  
 color: #1B5E20; 
 font-size: 24px;
-background-color: #FFEB3B ;
+/* background-color: #FFEB3B ;*/
 
 }
 
@@ -117,17 +196,36 @@ input::placeholder {
   color: #333;
 }
 
+
+
 </style>
 </head>
 <body>
 
+  
+
 <div class="container">
-  <h1>Jamaica Personal Shipment Customs Duty Calculator Tool (Beta)</h1>
- 
+  
+  <div id="logo">
+    <img src="dutyCalculatorLogo1.png" alt="logo" style="width:400px;height:525px;">
+  </div>
+
+<div id="text-heading">
+  <h1>"Quickly Estimate Your Customs Import Duty Cost!"</h1>
+  <h3>Select Item, Enter Cost, Freight and Exchange Rate</h3>
+</div>
+  
+ <div class="form-container">
+  
   <form id="calculator-form">
 
-<label for="itemName">Select Item:</label>
-    <select id="itemName" required style="font-size: 16px; font-weight: bold; color: #27AE60;">
+  <div class="input-container-div">
+    <div class="input-label-div">
+        <label for="itemName">ITEM TYPE</label>
+    </div>
+
+<div class="input-value-div" id="itemName-list-Div">
+    <select class="itemsName" id="itemName" required>
       <option value="No item Selected" selected>No Item Selected</option>
       <option value="Jewelry">Jewelry</option>
       <option value="Clothing">Clothing</option>
@@ -146,71 +244,106 @@ input::placeholder {
       <option value="Human hair">Human hair</option>
       <option value="Books">Books</option>
     </select>
-
-    <label for="IC">Item Cost (USD):</label>
-    <input type="number" id="IC" step="0.01" placeholder="Enter item cost in USD" required style="font-size: 16px; font-weight: bold; color: #27AE60;">
+</div>
+</div>
+    <div class="input-container-div">
+      <div class="input-label-div"><label for="IC">ITEM COST</label></div>
+      <div class="input-value-div"><input type="number" id="IC" step="0.01" placeholder="Enter original currency" required style="font-size: 20px; font-weight: bold; color: #24a502;"></div>
+    </div>
     
-    <label for="FC">Freight Cost (USD):</label>
-    <input type="number" id="FC" step="0.01" placeholder="Enter freight cost in USD" required style="font-size: 16px; font-weight: bold; color: #27AE60;">
     
-    <label for="POC">Select Type:</label>
-    <select id="POC" required >
-      <option value="Personal">Personal</option>
-      <option value="Commercial">Commercial</option>
-    </select>
+    <div class="input-container-div">
+      <div class="input-label-div"><label for="FC">FREIGHT COST</label></div>
+      <div class="input-value-div"><input type="number" id="FC" step="0.01" placeholder="Enter original currency" required style="font-size: 20px; font-weight: bold; color: #24a502;"></div>    
+    </div>
     
-    <label for="ROE">Rate of Exchange:</label>
-    <input type="number" id="ROE" step="1" placeholder="Enter rate of exchange" required style="font-size: 16px; font-weight: bold; color: #27AE60;">
     
-    <label for="IDR">Import Duty Rate (%):</label>
-    <input type="number" id="IDR" step="0.01" placeholder="Import Duty" required style="font-size: 16px; font-weight: bold; color: #27AE60;">
+    <div class="input-container-div">
+      <div class="input-label-div">
+        <label for="POC">IMPORT TYPE</label>
+      </div>
+      <div class="input-value-div">
+        <select class="itemsName" id="POC" required>
+          <option value="Personal">Personal</option>
+          <option value="Commercial">Commercial</option>
+        </select>
+      </div>
+    </div>
+    
+    
+    <div class="input-container-div">
+      <div class="input-label-div"><label for="ROE">RATE OF EXCHANGE</label></div>
+      <div class="input-value-div"><input type="number" id="ROE" step="any" placeholder="Enter rate of exchange" required style="font-size: 20px; font-weight: bold; color: #24a502;"></div>
+    </div>
+    
+   
+    <div class="input-container-div">
+      <div class="input-label-div"><label for="IDR">IMPORT DUTY</label></div>
+      <div class="input-value-div"><input type="number" id="IDR" step="0.01" placeholder="Import Duty (%)" required style="font-size: 20px; font-weight: bold; color: #24a502;"></div>
+    </div>
+    
+    
     <!--<div class="display-input" id="IDR1" step="0.01">Duty</div>-->
+    <div class="input-container-div">
+      <div class="input-label-div"><label for="SCFR">STANDARD COMPLIANCE FEE</label></div>
+      <div class="input-value-div"> <input type="number" id="SCFR" step="0.01" placeholder="SCF (%)" required style="font-size: 20px; font-weight: bold; color: #24a502;"></div>
+    </div>
+    
+    
+    <div class="input-container-div">
+      <div class="input-label-div"><label for="ELR">ENVIRONMENTAL LEVY</label></div>
+      <div class="input-value-div"><input type="number" id="ELR" step="0.01" placeholder="Environmental Levy (%)" required style="font-size: 20px; font-weight: bold; color: #24a502;"></div>
+    </div>
+    
+    
+    <div class="input-container-div">
+      <div class="input-label-div"><label for="GCTR">GENERAL CONSUMPTION TAX</label></div>
+      <div class="input-value-div"><input type="number" id="GCTR" step="0.01" placeholder="GCT (%)" required style="font-size: 20px; font-weight: bold; color: #24a502;"></div>
+    </div>
+    
+    
+    <div class="button-container-div">
+      <div class="button-div"><input type="submit" value="GET TAX AMOUNT!"></div>
+      <div class="button-div"><input type="reset" value="CLEAR"></div>
+    </div>
+    
+   
 
-    <label for="SCFR">Standard Compliance Fee Rate (%):</label>
-    <input type="number" id="SCFR" step="0.01" placeholder="SCF" required style="font-size: 16px; font-weight: bold; color: #27AE60;">
     
-    <label for="ELR">Environmental Levy Rate (%):</label>
-    <input type="number" id="ELR" step="0.01" placeholder="Environmental Levy" required style="font-size: 16px; font-weight: bold; color: #27AE60;">
-    
-    <label for="GCTR">General Consumption Tax Rate (%):</label>
-    <input type="number" id="GCTR" step="0.01" placeholder="GCT" required style="font-size: 16px; font-weight: bold; color: #27AE60;">
-    
-    <input type="submit" value="Calculate">
-
-    <input type="reset" value="Reset">
 
   </form>
+</div>
   
   <div class="output">
-    <h2>Estimates:</h2>
-    <label for="CIF">CIF Value (USD):</label>
-    <span id="CIF" style="font-weight: bold; color: #27AE60;"></span>
+    <h2>Estimates</h2>
+    <label for="CIF">CIF VALUE (USD):</label>
+    <span id="CIF" style="font-weight: bold; color: #24a502;"></span>
     <br>
-    <label for="CIF_JMD">CIF (JMD):</label>
-    <span id="CIF_JMD" style="font-weight: bold; color: #27AE60;"></span>
+    <label for="CIF_JMD">CIF VALUE (JMD):</label>
+    <span id="CIF_JMD" style="font-weight: bold; color: #24a502;"></span>
     <br>
-    <label for="ID">Import Duty (JMD):</label>
-    <span id="ID" style="font-weight: bold; color: #27AE60;"></span>
+    <label for="ID">IMPORT CUSTOMS DUTY (ICD):</label>
+    <span id="ID" style="font-weight: bold; color: #24a502;"></span>
     <br>
-    <label for="SCF">Standard Compliance Fee (JMD):</label>
-    <span id="SCF" style="font-weight: bold; color: #27AE60;"></span>
+    <label for="SCF">STANDARD COMPLIANCE FEE (SCF):</label>
+    <span id="SCF" style="font-weight: bold; color: #24a502;"></span>
     <br>
-    <label for="CAF">Customs Administrative Fee (JMD):</label>
-    <span id="CAF" style="font-weight: bold; color: #27AE60;"></span>
+    <label for="CAF">CUSTOMS ADMINISTRATIVE FEE (CAF):</label>
+    <span id="CAF" style="font-weight: bold; color: #24a502;"></span>
     <br>
-    <label for="EL">Environmental Levy (JMD):</label>
-    <span id="EL" style="font-weight: bold; color: #27AE60;"></span>
+    <label for="EL">ENVIRONMENTAL LEVY (ENV):</label>
+    <span id="EL" style="font-weight: bold; color: #24a502;"></span>
     <br>
-    <label for="SD">Stamp Duty (JMD):</label>
-    <span id="SD" style="font-weight: bold; color: #27AE60;"></span>
+    <label for="SD">STAMP DUTY:</label>
+    <span id="SD" style="font-weight: bold; color: #24a502;"></span>
     <br>
-    <label for="GCT">General Consumption Tax (JMD):</label>
-    <span id="GCT" style="font-weight: bold; color: #27AE60;"></span>
+    <label for="GCT">GENERAL CONSUMPTION TAX (GCT):</label>
+    <span id="GCT" style="font-weight: bold; color: #24a502;"></span>
     <br>
-    <label for="Total" style="font-family: Oswald, sans-serif; font-weight: bold; color: #424949 ; font-size: 18px;">Total Estimated Duties & Taxes (JMD): $</label>
-    <span id="Total" ></span>
+    <label for="Total" style="font-weight: bold; color: #12a502; font-size: 24px;">TOTAL CUSTOMS CHARGES (JMD): $</label>
+    <span id="Total" style="font-weight: bold; color: #12a502; font-size: 24px;"></span>
   </div>
-<p id="footer">Copyright © 2023 Ricardo Wheeler | All Rights Reserved</p>
+<p id="footer">Copyright © 2024  Ricardo Wheeler | All Rights Reserved</p>
 </div>
 
 <script>
@@ -296,7 +429,8 @@ input::placeholder {
   document.getElementById("GCTR").value = GCTR;
    
     
-    const CIF = (IC + FC) + 0.01 * (IC + FC);
+    //const CIF = (IC + FC) + 0.01 * (IC + FC);
+    const CIF = IC + FC;
     const CIF_JMD = CIF * ROE;
     const ID = CIF * IDR / 100 * ROE; 
     const SCF = CIF * SCFR / 100 * ROE;
