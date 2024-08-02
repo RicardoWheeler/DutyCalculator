@@ -18,6 +18,7 @@ background-image: url("images/background1.png");
   max-width: 400px;
   margin: 0 auto;
   padding-left: 50px;
+  padding-right: 2px;
 }
 
 img.logo-image {
