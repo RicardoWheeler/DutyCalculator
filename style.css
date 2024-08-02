@@ -1,0 +1,215 @@
+body {
+  font-family: arial;
+  font-size: 20px;
+  background-color: ##229954;
+  color: #5F6A6A;
+  margin: 0;
+  padding: 0;
+
+background-image: url("images/background1.png");
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+/*opacity: 0.2;*/ /* Set the opacity of the background */
+  display: flex;
+}
+
+#logo {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+
+}
+
+H1 {
+  font-family: "poppins";
+  color: #25a102;
+  font-size: 36px;
+  text-align: center;
+  
+}
+
+H3 {
+  font-family: "Poppins";
+  color: #4c4f4b;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  
+}
+
+#text-heading{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer {
+  font-family: "poppins";
+  font-size: 16px;
+  color: #24a502;
+  text-align: center;
+  
+}
+
+.container {
+  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(227, 227, 227);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-container-div{
+display:flex;
+
+}
+
+.form-container{
+  background-color: #f0f0f0;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.button-div{
+margin-top: 20px;
+margin-bottom: 5px;
+margin-left:10px;
+}
+
+.input-container-div{
+display:flex;
+max-width: 600px;
+}
+
+.input-label-div{
+width: 50%;
+font-family: "Poppins";
+font-size: 16px;
+font-weight:400;
+text-align: left;
+color:#5d5c5c;
+align-content: center;
+padding-left: 10px;
+}
+
+.input-value-div{
+width: 50%;
+padding-right: 10px;
+padding-left: 10px;
+}
+
+.itemsName{
+font-family: "Poppins";
+font-size: 16px; 
+font-weight: 500; 
+color: #24a502;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="number"], select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="number"] {
+  width: calc(100% - 20px);
+}
+
+input[type="submit"] {
+  font-family: "Poppins";
+  background-color: #24a502;
+  color: yellow;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+  color: white;
+}
+
+input[type="reset"] {
+  font-family: "Poppins";
+  background-color: #24a502;
+  color: yellow;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="reset"]:hover {
+  background-color: #555;
+  color: white;
+}
+
+.output {
+  background-color: #f0f0f0;
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.output-label {
+  font-family: "Poppins";
+  font-weight: bolder;
+  color:#929292;
+}
+
+.output-value{
+  font-family: "Poppins"; 
+  font-weight: 600;  
+  color: #24a502; 
+  font-size: 20px;
+}
+
+
+#Total{
+font-family: "Poppins"; 
+font-weight: bolder;  
+color: #24a5020; 
+font-size: 24px;
+}
+
+/* Target the placeholder text of input elements */
+
+input::placeholder {
+/* Your styling properties here */
+font-family: "Poppins";
+font-size: 18px;
+color: #D7DBDD  ;
+font-style: normal;
+font-weight: normal;
+}
+
+.display-input {
+border: 1px solid #ccc;
+padding: 5px;
+background-color: #f0f0f0;
+font-family: "Poppins";
+font-size: 14px;
+color: #333;
+}
+
+.total-dollar-unit {
+  color: #24a502;
+  font-size: 24px;
+}
