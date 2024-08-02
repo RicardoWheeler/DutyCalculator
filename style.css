@@ -19,6 +19,10 @@ background-image: url("images/background1.png");
   margin: 0 auto;
 }
 
+#logo-image{
+margin: 0 auto;
+}
+
 H1 {
   font-family: "poppins";
   color: #25a102;
