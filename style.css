@@ -79,6 +79,10 @@ display:flex;
   border-radius: 10px;
 }
 
+#calculator-form{
+width: 100%;
+}
+
 .button-div{
 margin-top: 20px;
 margin-bottom: 5px;
