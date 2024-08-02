@@ -87,11 +87,11 @@ margin-left:10px;
 
 .input-container-div{
 display:flex;
-max-width: 380px;
+max-width: 90%;
 }
 
 .input-label-div{
-width: 30%;
+width: 40%;
 font-family: "Poppins";
 font-size: 16px;
 font-weight:400;
@@ -102,7 +102,7 @@ padding-left: 10px;
 }
 
 .input-value-div{
-width: 70%;
+width: 60%;
 padding-right: 10px;
 padding-left: 10px;
 }
