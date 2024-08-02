@@ -17,7 +17,10 @@ background-image: url("images/background1.png");
 #logo-div {
   max-width: 600px;
   margin: 0 auto;
+}
 
+#logo-image{
+  width:300px;
 }
 
 H1 {
