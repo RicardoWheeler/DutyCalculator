@@ -16,7 +16,7 @@ background-image: url("images/background1.png");
 
 #logo {
   display: flex;
-  max-width: 400px;
+  max-width: 300px;
   margin: 0 auto;
 
 }
