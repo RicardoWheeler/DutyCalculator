@@ -20,7 +20,8 @@ background-image: url("images/background1.png");
 }
 
 #logo-image{
-  width:300px;
+  width:400px;
+  height: 525px;
 }
 
 H1 {
