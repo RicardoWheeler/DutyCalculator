@@ -19,11 +19,6 @@ background-image: url("images/background1.png");
   margin: 0 auto;
 }
 
-#logo-image{
-  width:400px;
-  height: 525px;
-}
-
 H1 {
   font-family: "poppins";
   color: #25a102;
@@ -64,7 +59,7 @@ H3 {
   padding: 20px;
   background-color: rgb(227, 227, 227);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
+  
 }
 
 .button-container-div{
