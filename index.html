@@ -4,214 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <title>
-    Jamaica Duty Calculator
-  </title>
-
-  <style>
-  
-  body {
-    font-family: Trebuchet MS, sans-serif;
-    font-size: 20px;
-    background-color: ##229954;
-    color: #5F6A6A;
-    margin: 0;
-    padding: 0;
-
-background-image: url("background1.png");
-    background-size: cover; /* Ensure the image covers the entire viewport */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Keep the background fixed while scrolling */
-  /*opacity: 0.2;*/ /* Set the opacity of the background */
-    display: flex;
-  }
-
-  #logo {
-    display: flex;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .logo-image{
-    max-width: 200px;
-    margin: 0 auto;
-  }
-
-H1 {
-    font-family: Oswald, sans-serif;
-    color: #25a102;
-    font-size: 28px;
-    text-align: center; 
-  }
-
-  H3 {
-    font-family: Oswald, sans-serif;
-    color: #4c4f4b;
-    font-size: 24px;
-    text-align: center;
-     }
-
-  #text-heading{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-p#footer {
-    font-family: Oswald, sans-serif;
-    color: #24a502;
-    text-align: center;  
-  }
-
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 5px;
-    background-color: rgb(227, 227, 227);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-.form-container{
-    background-color: #f0f0f0;
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.button-container-div{
-  display:flex;
-}
-  
-.button-div{
-  margin-top: 20px;
-  margin-bottom: 5px;
-  margin-left:10px;
-}
-
-.input-container-div{
-  display:flex;
-  max-width: 600px;
-}
-
-.input-label-div{
-  width: 50%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 22px;
-  font-weight: bolder;
-  text-align: left;
-  color:#060606;
-  align-content: center;
-  padding-left: 10px;
-}
-
-.input-value-div{
-  width: 50%;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.itemsName{
-  font-size: 20px; 
-  font-weight: bold; 
-  color: #24a502;
-}
-
-  label {
-    font-weight: bold;
-  }
-  input[type="number"], select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  input[type="number"] {
-    width: calc(100% - 20px);
-  }
-  input[type="submit"] {
-    background-color: #24a502;
-    color: yellow;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  input[type="submit"]:hover {
-    background-color: #555;
-    color: white;
-  }
-
-  input[type="reset"] {
-    background-color: #24a502;
-    color: yellow;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  input[type="reset"]:hover {
-    background-color: #555;
-    color: white;
-  }
-
-  .output {
-    background-color: #f0f0f0;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  .output label {
-    font-weight: bolder;
-    color:#060606;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-#Total{
-font-family: Oswald, sans-serif; 
-font-weight: bolder;  
-color: #1B5E20; 
-font-size: 24px;
-/* background-color: #FFEB3B ;*/
-
-}
-
-/* Target the placeholder text of input elements */
-
-input::placeholder {
-  /* Your styling properties here */
-  color: #D7DBDD  ;
-  font-style: italic;
-  font-weight: normal;
-}
-
-.display-input {
-  border: 1px solid #ccc;
-  padding: 5px;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #333;
-}
+<link rel="stylesheet" href="style.css">
 
 
 
-</style>
+<title>
+ Custom Duty Calculator
+</title>
+
 </head>
-<body>
 
-  
+
+<body> 
 
 <div class="container">
   
   <div id="logo">
-    <img src="dutyCalculatorLogo1.png" alt="logo" class="logo-image">
+    <img src="images/dutyCalculatorLogo1.png" alt="logo" style="width:400px;height:525px;">
   </div>
 
 <div id="text-heading">
@@ -231,22 +44,27 @@ input::placeholder {
 <div class="input-value-div" id="itemName-list-Div">
     <select class="itemsName" id="itemName" required>
       <option value="No item Selected" selected>No Item Selected</option>
-      <option value="Jewelry">Jewelry</option>
-      <option value="Clothing">Clothing</option>
-      <option value="Shoes">Shoes</option>
-      <option value="Laptops PC's">Laptops PC's</option>
-      <option value="Desktop PC's">Desktop PC's</option>
+      <option value="Clothing">Clothing & Accessories</option>
+      <option value="Shoes">Shoes, Sandals & Slippers</option>
+      <option value="Laptop & Desktop PC's">Laptop & Desktop PC's</option>
+      <option value="Video Game Consoles">Video Game Consoles</option>
       <option value="Tablet PC's">Tablet PC's</option>
-      <option value="Smart Phones">Smart Phones</option>
+      <option value="Cameras">Cameras</option>
+      <option value="Drones">HD Video Drones</option>
+      <option value="Smart Phones">Cellular & Smart Phones</option>
+      <option value="Smart Watches">Smart Watches</option>
+      <option value="Earphones">Earpods, Bluetooth Earphones</option>
       <option value="Computer Parts">Computer Parts</option>
       <option value="Computer Accessories">Computer Accessories</option>
       <option value="Televisions">Televisions</option>
-      <option value="Auto Parts">Auto Parts</option>
+      <option value="Audio Equipment">Audio Speakers and Equipments</option>
+      <option value="Household Appliances">Household Appliances</option>
+      <option value="Auto Parts">Auto Parts & Accessories</option>
       <option value="Food Items">Food Items</option>
+      <option value="Jewellry">Jewellry</option>
       <option value="Costume Jewellery">Costume Jewellery</option>
-      <option value="Synthetic Hair">Synthetic Hair</option>
-      <option value="Human hair">Human hair</option>
-      <option value="Books">Books</option>
+      <option value="Synthetic Hair">Human & Synthetic Hair</option>
+      <option value="Books">Printed Books</option>
     </select>
 </div>
 </div>
@@ -310,202 +128,48 @@ input::placeholder {
       <div class="button-div"><input type="submit" value="GET TAX AMOUNT!"></div>
       <div class="button-div"><input type="reset" value="CLEAR"></div>
     </div>
-    
-   
-
-    
 
   </form>
 </div>
   
   <div class="output">
-    <h2>Estimates</h2>
-    <label for="CIF">CIF VALUE (USD):</label>
-    <span id="CIF" style="font-weight: bold; color: #24a502;"></span>
+    <h3>Jamaica Customs Duty Estimates</h3>
+    <label class="output-label" for="CIF">CIF VALUE (OC):</label>
+    <span class="output-value" id="CIF" ></span>
     <br>
-    <label for="CIF_JMD">CIF VALUE (JMD):</label>
-    <span id="CIF_JMD" style="font-weight: bold; color: #24a502;"></span>
+    <label class="output-label" for="CIF_JMD">CIF VALUE (JMD):</label>
+    <span class="output-value" id="CIF_JMD" ></span>
     <br>
-    <label for="ID">IMPORT CUSTOMS DUTY (ICD):</label>
-    <span id="ID" style="font-weight: bold; color: #24a502;"></span>
+    <label class="output-label" for="ID">IMPORT CUSTOMS DUTY (ICD):</label>
+    <span class="output-value" id="ID" ></span>
     <br>
-    <label for="SCF">STANDARD COMPLIANCE FEE (SCF):</label>
-    <span id="SCF" style="font-weight: bold; color: #24a502;"></span>
+    <label class="output-label" for="SCF">STANDARD COMPLIANCE FEE (SCF):</label>
+    <span class="output-value" id="SCF" ></span>
     <br>
-    <label for="CAF">CUSTOMS ADMINISTRATIVE FEE (CAF):</label>
-    <span id="CAF" style="font-weight: bold; color: #24a502;"></span>
+    <label class="output-label" for="CAF">CUSTOMS ADMINISTRATIVE FEE (CAF):</label>
+    <span class="output-value" id="CAF" ></span>
     <br>
-    <label for="EL">ENVIRONMENTAL LEVY (ENV):</label>
-    <span id="EL" style="font-weight: bold; color: #24a502;"></span>
+    <label class="output-label" for="EL">ENVIRONMENTAL LEVY (ENV):</label>
+    <span class="output-value" id="EL" ></span>
     <br>
-    <label for="SD">STAMP DUTY:</label>
-    <span id="SD" style="font-weight: bold; color: #24a502;"></span>
+    <label class="output-label" for="SD">STAMP DUTY:</label>
+    <span class="output-value" id="SD" ></span>
     <br>
-    <label for="GCT">GENERAL CONSUMPTION TAX (GCT):</label>
-    <span id="GCT" style="font-weight: bold; color: #24a502;"></span>
+    <label class="output-label" for="GCT">GENERAL CONSUMPTION TAX (GCT):</label>
+    <span class="output-value" id="GCT" ></span>
     <br>
-    <label for="Total" style="font-weight: bold; color: #12a502; font-size: 24px;">TOTAL CUSTOMS CHARGES (JMD): $</label>
-    <span id="Total" style="font-weight: bold; color: #12a502; font-size: 24px;"></span>
+    <label class="output-label" for="Total" >TOTAL CUSTOMS CHARGES (JMD):<span class="total-dollar-unit">$</span></label>
+    <span class="output-value" id="Total"></span>
   </div>
-<p id="footer">Copyright © 2024  Ricardo Wheeler | All Rights Reserved</p>
+
+<p class="footer">
+  Copyright © 2024 &#183; Ricardo Wheeler &#183; All Rights Reserved
+</p>
+
 </div>
 
-<script>
-  const form = document.getElementById("calculator-form");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-   
-    
+<script type="text/javascript" src="script.js"></script>
 
-    const itemName = document.getElementById("itemName").value;
-    const IC = parseFloat(document.getElementById("IC").value);
-    const FC = parseFloat(document.getElementById("FC").value);
-    const POC = document.getElementById("POC").value;
-    const ROE = parseFloat(document.getElementById("ROE").value);
-    //const IDR = parseFloat(document.getElementById("IDR").value);
-    //const SCFR = parseFloat(document.getElementById("SCFR").value);
-    //const ELR = parseFloat(document.getElementById("ELR").value);
-    //const GCTR = parseFloat(document.getElementById("GCTR").value);
-
-
-  // Set values based on itemName
-  switch (itemName) {
-    case "Jewelry":
-    case "Clothing":
-    case "Shoes":
-      IDR = 20;
-      SCFR = 0.3;
-      ELR = 0.5;
-      GCTR = 15;
-      break;
-
-    case "Laptops PC's":
-    case "Desktop PC's":
-    case "Tablet PC's":
-    case "Computer Parts":
-    case "Computer Accessories":
-      IDR = 0;
-      SCFR = 0;
-      ELR = 0.5;
-      GCTR = 15;
-      break;
-
-    case "Smart Phones":
-      IDR = 20;
-      SCFR = 0.3;
-      ELR = 0.5;
-      GCTR = 25;
-      break;
-
-    case "Televisions":
-    case "Food Items":
-    case "Costume Jewellery":
-    case "Synthetic Hair":
-    case "Human hair":
-      IDR = 20;
-      SCFR = 0.3;
-      ELR = 0.5;
-      GCTR = 15;
-      break;
-
-    case "Auto Parts":
-      IDR = 30;
-      SCFR = 0;
-      ELR = 0.5;
-      GCTR = 15;
-      break;
-
-    case "Books":
-      IDR = 0;
-      SCFR = 0;
-      ELR = 0.5;
-      GCTR = 15;
-      break;
-  }
-
-
-
-// Set values in input fields
-
-  document.getElementById("IDR").value = IDR;
-  document.getElementById("SCFR").value = SCFR;
-  document.getElementById("ELR").value = ELR;
-  document.getElementById("GCTR").value = GCTR;
-   
-    
-    //const CIF = (IC + FC) + 0.01 * (IC + FC);
-    const CIF = IC + FC;
-    const CIF_JMD = CIF * ROE;
-    const ID = CIF * IDR / 100 * ROE; 
-    const SCF = CIF * SCFR / 100 * ROE;
-    const CAF = POC === "Personal" ? 2500 : 5000;
-    const EL = CIF * ELR /100 * ROE;
-    const SD = CIF * ROE >= 5501 ? 100 : 5;
-    const GCT = ((CIF_JMD + ID + SCF + CAF + EL) * GCTR) / 100; // 10000
-    const Total = ID + SCF + CAF + EL + SD + GCT; 
-   
-
-    const SD_JMD = CIF >= 5501 ? 100 : 5;
-    const GCT_JMD = (CIF_JMD + ID + SCF + CAF + EL) * GCTR * ROE; 
-    const Total_JMD = ID + SCF + CAF + EL + SD + GCT;
-    
-    document.getElementById("CIF").textContent = CIF.toFixed(2);
-    document.getElementById("CIF_JMD").textContent = CIF_JMD.toFixed(2);
-    document.getElementById("ID").textContent = ID.toFixed(2);
-    document.getElementById("SCF").textContent = SCF.toFixed(2);
-    document.getElementById("CAF").textContent = CAF.toFixed(2);
-    document.getElementById("EL").textContent = EL.toFixed(2);
-    document.getElementById("SD").textContent = SD.toFixed(2);
-    document.getElementById("GCT").textContent = GCT.toFixed(2);
-    document.getElementById("Total").textContent = Total.toFixed(2);
-
-    document.getElementById("SD_JMD").textContent = SD_JMD.toFixed(2);
-    document.getElementById("GCT_JMD").textContent = GCT_JMD.toFixed(2);
-    document.getElementById("Total_JMD").textContent = Total_JMD.toFixed(2);
-   
-  });
-
-
-// Add event listener for the change event on itemName dropdown
-
-const itemNameDropdown = document.getElementById("itemName");
-itemNameDropdown.addEventListener("change", function () {
-  const selectedItemName = itemNameDropdown.value;
-
-  
-// Trigger the form submission to calculate and update the values
-  
-form.dispatchEvent(new Event("submit"));
-});
-
-
-// Add event listener for the reset button
-
-const resetButton = document.querySelector("input[type='reset']");
-resetButton.addEventListener("click", function () {
-  
-
-
-// Reset input fields and trigger form submission
-  form.reset();
-  form.dispatchEvent(new Event("submit"));
-
-// Reset output spans
-
-  document.getElementById("CIF").textContent = "";
-  document.getElementById("CIF_JMD").textContent = "";
-  document.getElementById("ID").textContent = "";
-  document.getElementById("SCF").textContent = "";
-  document.getElementById("CAF").textContent = "";
-  document.getElementById("EL").textContent = "";
-  document.getElementById("SD").textContent = "";
-  document.getElementById("GCT").textContent = "";
-  document.getElementById("Total").textContent = ""; 
-
-});
-
-
-</script>
 
 </body>
 </html>
