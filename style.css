@@ -52,14 +52,11 @@ H3 {
 }
 
 .container {
-  
-
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   background-color: rgb(227, 227, 227);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
 }
 
 .button-container-div{
