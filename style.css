@@ -98,12 +98,12 @@ margin: 0 auto;
 .input-label-div{
 width: 40%;
 font-family: "Poppins";
-font-size: 16px;
-font-weight:400;
+font-size: 14px;
+font-weight:normal;
 text-align: left;
 color:#5d5c5c;
 align-content: center;
-padding-left: 10px;
+padding-left: 8px;
 }
 
 .input-value-div{
