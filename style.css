@@ -23,6 +23,7 @@ img.logo-image {
 margin: 0 auto;
 width: 300px;
 height: 394px;
+display: block;
 }
 
 H1 {
