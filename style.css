@@ -168,6 +168,23 @@ input[type="reset"]:hover {
   color: white;
 }
 
+#print-button {
+  font-family: "Poppins";
+  background-color: #24a502;
+  color: yellow;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#print-button:hover {
+  background-color: #555;
+  color: white;
+}
+
 .output {
   background-color: #f0f0f0;
   margin-top: 10px;
@@ -221,3 +238,52 @@ color: #333;
   color: #24a502;
   font-size: 24px;
 }
+
+@media print {
+  body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  .output {
+    background-color: white;
+    padding: 20px;
+    border: none;
+  }
+
+  .button-container-div,
+  #logo,
+  .footer,
+  #print-button {
+    display: none; /* Hide elements that are not needed in the print version */
+  
+  }
+
+  .output h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+  }
+
+  .output-label {
+    font-size: 16px;
+    color: #000;
+  }
+
+  .output-value {
+    font-size: 20px;
+    color: #000;
+  }
+
+  .total-dollar-unit {
+    color: #000;
+  }
+}
+
