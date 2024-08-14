@@ -138,6 +138,11 @@ itemNameDropdown.addEventListener("change", function () {
 form.dispatchEvent(new Event("submit"));
 });
 
+// This will trigger the print dialog
+
+document.getElementById("print-button").addEventListener("click", function () {
+    window.print(); 
+});
 
 // Add event listener for the reset button
 
